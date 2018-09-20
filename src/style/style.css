@@ -1,0 +1,10 @@
+body {
+    background-color: #f00;
+    display: flex;
+    display: grid;
+    .container {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 30px;
+    }
+}
