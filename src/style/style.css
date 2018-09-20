@@ -1,7 +1,13 @@
+:root {
+    --bgc: #f1f1f1;
+    --font-size: 1.5rem;
+}
+
 body {
-    background-color: #f00;
+    background-color: var(--bgc);
     display: flex;
     display: grid;
+    font-size: var(--font-size);
     .container {
         width: 100%;
         margin: 0 auto;
