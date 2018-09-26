@@ -7,6 +7,7 @@ var lost = require('lost');
 var minmax = require('postcss-media-minmax');
 var pxtorem = require('postcss-pxtorem');
 var postcssResponsiveFont = require('postcss-responsive-font');
+var cssnano = require('cssnano');
 
 var pug = require('gulp-pug');
 
@@ -18,6 +19,7 @@ gulp.task('postcss', function () {
         lost,
         minmax,
         pxtorem,
+        // cssnano,
         postcssResponsiveFont
     ];
     return gulp.src('./src/style/**/*.css')
@@ -36,7 +38,7 @@ gulp.task('pug', function () {
 
 // Rerun the task when a file changes
 gulp.task('watch', function () {
-    gulp.watch('src/style/style.css', ['postcss']);
+    gulp.watch('src/style/*.css', ['postcss']);
     gulp.watch('src/pug/**/*.pug', ['pug']);
     // gulp.watch(paths.images, ['images']);
 });

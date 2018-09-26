@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900|PT+Sans:400,700&subset=cyrillic,cyrillic-ext');
+
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'PT Sans', sans-serif; */
+
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -373,30 +378,206 @@ template {
 @lost flexbox flex;
 
 :root {
-    --bgc: #f1f1f1;
     --font-size: 16px;
+    --fonfamily-title: 'Montserrat', sans-serif;
+    --fonfamily-main: 'PT Sans', sans-serif;
     --color: #212121;
+
+    /* color */
+
+    --main-color: #1F242C;
+    --title-color: #fff;
+    --main-text-color: #AAABAE;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
 }
 
 body {
-    background-color: var(--bgc);
-    font-size-responsive: 30px 60px 980px 1280px;
-    font-size-responsive: 15px 45px 767px 980px;
-    font-size-responsive: 12px 20px 480px 600px
+    background-color: var(--main-color);
+    font-weight: 400;
+    font-family: var(--fonfamily-main);
+    font-style: normal;
+    letter-spacing: 0.2;
+    color: var(--main-text-color);
+    line-height: 24px;
 }
 
-/* section {
-    lost-center: 1170px;
+h1, h2, h3, h4, h5 {
+    font-family: var(--fonfamily-title);
+    text-transform: uppercase;
+    font-weight: 400;
+    color: var(--title-color);
+    margin-top: 35px;
+    margin-bottom: 35px;
+    padding: 0;
+    line-height: 24px;
 }
 
-div {
-    lost-column: 1/3;
+hr {
+    /* background-color: #6E8CB4; */
+    background-color: #fff;
+    height: 1px;
+    border: none;
+    padding: 0;
+    margin: 0;
 }
 
-.foo {
-    font-size: 12px;
+/* Start index page */
+.main-page {
+    /* max-width: 1770px; */
+    /* margin: 0 auto; */
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 40px auto 40px;
+    grid-gap: 20px;
+}
+header {
+    background-color: #182f36;
+    grid-column: 1 / -1;
+
+    display: flex;
+    align-items: center;
+
+    .logo {
+        display: block;
+        margin-left: 10px;
+        margin-right: auto;
+        text-decoration: none;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 100;
+        color: #fff;
+        letter-spacing: .2em;
+    }
+
+    .logout {
+        display: block;
+        margin-right: 10px;
+        text-decoration: none;
+        font-weight: 400;
+        color: #fff;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+}
+aside {
+    background-color: #182f36;
+    grid-column: 1 / 3;
+
+    nav {
+        padding: 10px;
+
+        ul {
+            padding: 0;
+            margin: 0;
+            margin-top: 35px;
+            list-style: none;
+            li {
+                border-bottom: 1px solid #fff;
+                &:last-child {
+                    border-bottom: none;
+                }
+                a {
+                    display: block;
+                    line-height: 60px;
+                    color: #fff;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    transition: all 0.3s;
+                    padding: 0 10px;
+                    font-size: 14px;
+                    
+                    &:hover {
+                        background-color: #274e59;
+                    }
+                }
+            }
+        }
+        
+    }
+    
+}
+main {
+    background-color:var(--main-color);
+    grid-column: 3 / -1;
 }
 
-@media (width >=768px) and (width <=1024px)  {
+.video-container {
+    display: flex;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
 
-} */
+    .video-item {
+        padding: 10px;
+        /* border: 1px solid #fff; */
+        border-radius: 4px;
+        flex: 0 0 calc(100% / 4 - 20px);
+        margin-right: 20px;
+
+
+        .video {
+            height: 219px;
+
+            iframe {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+
+            img {
+                display: block;
+                height: 100%;
+            }
+        }
+
+        hr {
+            /* margin-bottom: 35px; */
+        }
+
+        .date-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .date,
+            .time {
+                font-size: 12px;
+            }
+        }
+
+        .tags {
+            a {
+                color: #fff;
+                font-size: 12px;
+                text-decoration: none;
+                padding: 8px;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+    }
+}
+
+footer {
+    background-color: #182f36;
+    grid-column: 1 / -1;
+    text-align: center;
+    .copy {
+        font-size: 12px;
+    }
+}
+/* End index page */

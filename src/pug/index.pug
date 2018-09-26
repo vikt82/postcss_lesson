@@ -1,3 +1,4 @@
+include new
 <!DOCTYPE html>
 html(lang="en")
     head
@@ -5,4 +6,70 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         title Document
+        link(rel="stylesheet", href="css/style.css")
     body
+
+        .main-page
+            
+            header
+                a.logo(href="#") Vhost/>
+
+                a.logout(href="#") Logout
+            
+            aside
+                nav
+                    h3 Menu
+                    hr
+                    ul
+                        li: a(href="#", title="title") link 1
+                        li: a(href="#", title="title") link 2
+                        li: a(href="#", title="title") link 3 
+                        li: a(href="#", title="title") link 4
+                        li: a(href="#", title="title") link 5
+
+            main
+                h2 New
+                +new(
+                    [
+                        {
+                            video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/1_Oa5mZ12xs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>',
+                            title: '60 минут 26.09.2018 │Вечерний выпуск│',
+                            videod: 'video'
+                        },
+                        {
+                            video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/1_Oa5mZ12xs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>',
+                            title: 'lorem 4  dsakdjlgdjfglkjsd dsfjglsdjf sdfjgha dfdlskajd',
+                            videod: 'video'
+                        },
+                        {
+                            video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/1_Oa5mZ12xs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>',
+                            title: 'lorem 4  dsakdjlgdjfglkjsd dsfjglsdjf sdfjgha dfdlskajd',
+                            videod: 'video'
+                        },
+                        {
+                            video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/1_Oa5mZ12xs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>',
+                            title: '60 минут 26.09.2018 │Вечерний выпуск│',
+                            videod: 'video'
+                        },
+                        {
+                            video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/1_Oa5mZ12xs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>',
+                            title: 'lorem 4  dsakdjlgdjfglkjsd dsfjglsdjf sdfjgha dfdlskajd',
+                            videod: 'video'
+                        },
+                        {
+                            video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/1_Oa5mZ12xs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>',
+                            title: 'lorem 4  dsakdjlgdjfglkjsd dsfjglsdjf sdfjgha dfdlskajd',
+                            videod: 'video'
+                        },
+                        {
+                            video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/1_Oa5mZ12xs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>',
+                            title: 'lorem 4  dsakdjlgdjfglkjsd dsfjglsdjf sdfjgha dfdlskajd',
+                            videod: 'video'
+                        }
+                    ]
+                )
+
+
+                
+            footer 
+                p.copy © 2018
